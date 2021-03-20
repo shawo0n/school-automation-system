@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Backend\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('backend.layout.profile');
 });
+
+Route::get('/academy/students', [StudentController::class,'students'])->name('academy.students');
