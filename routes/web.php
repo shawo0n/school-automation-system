@@ -21,4 +21,5 @@ Route::get('/profile', function () {
     return view('backend.layout.profile');
 });
 
-Route::get('/academy/students', [StudentController::class,'students'])->name('academy.students');
+Route::get('/students', [StudentController::class,'students'])->name('academy.students');
+Route::post('/student/create', [StudentController::class, 'studentcreate'])->name('student.create');
