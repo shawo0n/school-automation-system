@@ -7,18 +7,18 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    public function students()
-    {
+    public function students()    //show from database
+    {   $title = "Students List";
         $students = Student::all();
-        return view('backend.layout.academy.students',compact('students'));
+        return view('backend.layout.users.students',compact('students','title'));
     }
 
 
-    public function studentcreate(Request $request)
+    public function studentcreate(Request $request)  //send to database
     {
        Student::create([
 
-        'fullname'=> $request -> student_name,
+        'fullname'=> $request -> student_name,   // 'fullname = database column name , student_name = form name
         'studentID' => $request -> student_id,
         'DOB' => $request -> dob,
         'email' => $request -> email,

@@ -12,15 +12,18 @@
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Academic</span>
+                                <span>Users</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="{{route('academy.students')}}">Students</a>
+                                    <a href="{{route('users.students')}}">Students</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">Teacher</a>
-                                
+                                    <a href="{{ route('users.teachers') }}">Teacher</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="#">Parent</a>
+                                </li>
 
 
 

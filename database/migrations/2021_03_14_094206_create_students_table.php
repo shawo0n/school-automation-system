@@ -21,7 +21,7 @@ class CreateStudentsTable extends Migration
 			$table->string('email', 100)->unique();
 			$table->string('phoneno', 20)->nullable();
 			$table->string('password', 50)->nullable();
-			$table->binary('image')->nullable();
+			$table->text('image')->nullable();
             $table->timestamps();
         });
     }

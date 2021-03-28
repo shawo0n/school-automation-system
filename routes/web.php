@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\StudentController;
+use App\Http\Controllers\backend\TeacherController;
+use App\Http\Controllers\backend\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +15,18 @@ use App\Http\Controllers\Backend\StudentController;
 |
 */
 
-Route::get('/', function () {
-    return view('backend.home');
-});
+// Route::get('/', function () {
+//     return view('backend.home');
+// });
 
-Route::get('/profile', function () {
-    return view('backend.layout.profile');
-});
+// Route::get('/profile', function () {
+//     return view('backend.layout.profile');
+// });
 
-Route::get('/students', [StudentController::class,'students'])->name('academy.students');
+
+Route::get('/', [DashboardController::class, 'home'])->name('home');
+Route::get('/students', [StudentController::class,'students'])->name('users.students');
 Route::post('/student/create', [StudentController::class, 'studentcreate'])->name('student.create');
+Route::get('/teacher', [TeacherController::class, 'teacherslist'])->name('users.teachers');
+Route::get('/teacher/form',[TeacherController::class,'teachersform'])->name('teacher.form');
+Route::post('/teacher/create',[TeacherController::class,'teacherscreate'])->name('teacher.create');
