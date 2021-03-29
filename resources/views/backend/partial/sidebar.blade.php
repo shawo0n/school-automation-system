@@ -22,7 +22,7 @@
                                     <a href="{{ route('users.teachers') }}">Teacher</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">Parent</a>
+                                    <a href="{{route('parents.list')}}">Parent</a>
                                 </li>
 
 
