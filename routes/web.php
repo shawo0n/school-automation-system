@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\StudentController;
 use App\Http\Controllers\backend\TeacherController;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\ParentController;
+use App\Http\Controllers\Backend\ClassController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +40,8 @@ Route::post('/teacher/create',[TeacherController::class,'teacherscreate'])->name
 Route::get('/parent/list',[ParentController::class,'parentsList'])->name('parents.list');
 Route::get('/parent/form',[ParentController::class,'parentsForm'])->name('parents.form');
 Route::post('/parent/create',[ParentController::class,'parentsCreate'])->name('parents.create');
+
+
+//class
+
+Route::get('/class',[ClassController::class,'classList'])->name('class.list');

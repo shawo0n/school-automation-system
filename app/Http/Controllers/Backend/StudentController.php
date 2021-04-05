@@ -18,6 +18,28 @@ class StudentController extends Controller
 
     public function studentcreate(Request $request)  //send to database
     {
+
+
+        $file_name='';
+        //step 1 check if request has file
+        if($request->hasFile('image'))
+        {
+            //file valid or not
+            $file=$request->file('image');
+            if($file->isValid())
+            {
+                //generate file name
+                $file_name=date('Ymdhms').'.'.$file->getClientOriginalExtension();
+                //store into local directory
+                $file->storeAs('students',$file_name);
+            }
+        }
+
+
+
+
+
+
        Student::create([
 
         'fullname'=> $request -> student_name,   // 'fullname = database column name , student_name = form name
@@ -27,7 +49,7 @@ class StudentController extends Controller
         'email' => $request -> email,
         'phoneno' => $request -> cell_no,
         'password' => $request -> password,
-        'image' => $request -> image
+        'image' => $file_name
 
 
 

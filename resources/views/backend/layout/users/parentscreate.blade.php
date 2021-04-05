@@ -11,7 +11,7 @@
         </div>
         <div class="modal-body">
           
-      <form action="{{ route('parents.create') }}" method="post"  >
+      <form action="{{ route('parents.create') }}" method="post" enctype="multipart/form-data" >
 
     @csrf
   

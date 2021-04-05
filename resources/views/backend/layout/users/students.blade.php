@@ -39,7 +39,7 @@
         <td>{{$data->parent_name}}</td>
         <td>{{$data->email}}</td>
         <td>{{$data->phoneno}}</td>
-        <td>{{$data->image}}</td>
+        <td><img style="width: 100px;" src="{{url('/images/students/'.$data->image)}}" alt="image"></td>
         
          <td>
             <a class="btn btn-success" href="">View</a>
@@ -72,7 +72,7 @@
 
       <div class="modal-body">
         
-	<form action="{{route('student.create')}}" method="post"  >
+	<form action="{{route('student.create')}}" method="post" enctype="multipart/form-data" >
   @csrf
 
 	<div class="form-group input-group">

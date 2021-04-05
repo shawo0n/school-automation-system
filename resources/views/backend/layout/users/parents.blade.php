@@ -5,7 +5,7 @@
 
 
 <a href="{{ route('parents.form') }}"><button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">
-    Create teacher
+    Create parent
   </button>
 </a>
 

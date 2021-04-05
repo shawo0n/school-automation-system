@@ -36,16 +36,18 @@
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-collection-fill"></i>
-                                <span>Extra Components</span>
+                                <span>Academic</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="extra-component-avatar.html">Avatar</a>
+                                    <a href="{{route('class.list')}}">Add class</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="extra-component-sweetalert.html">Sweet Alert</a>
-                                
-
+                                    <a href="extra-component-sweetalert.html">Add section</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="extra-component-sweetalert.html">Add subject</a>
+                                </li>
 
 
 

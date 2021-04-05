@@ -16,11 +16,11 @@
           <th scope="col">#</th>
           <th scope="col">Full name</th>
           <th scope="col">Designation</th>
-          <th scope="col">BG</th>
+          {{-- <th scope="col">BG</th> --}}
           <th scope="col">Date of birth</th>
           <th scope="col">Gender</th>
           <th scope="col">Email</th>
-          <th scope="col">Phone no</th>
+          {{-- <th scope="col">Phone no</th> --}}
           <th scope="col">image</th>
           <th scope="col">Action</th>
       </tr>
@@ -31,14 +31,15 @@
           <th scope="row">{{$data->id}}</th>
           <td>{{$data->fullname}}</td>
           <td>{{$data->designation}}</td>
-          <td>{{$data->bloodgroup}}</td>
+          {{-- <td>{{$data->bloodgroup}}</td> --}}
           <td>{{$data->DOB}}</td>
           <td>{{$data->gender}}</td>
           <td>{{$data->email}}</td>
-          <td>{{$data->phoneno}}</td>
+          {{-- <td>{{$data->phoneno}}</td> --}}
           <td>{{$data->image}}</td>
           <td><a class="btn btn-success" href="">View</a>
-          <a class="btn btn-danger" href="">Delete</a></td>
+          <a class="btn btn-danger" href="">Delete
+            </a> <a class="btn btn-danger" href="">Delete</a></td>
               
               
         
