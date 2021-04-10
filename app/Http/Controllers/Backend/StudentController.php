@@ -11,6 +11,7 @@ class StudentController extends Controller
     public function students()    //show from database
     {   $title = "Students List";
         $students = Student::all();
+        $students = Student::paginate(3);
         $guardian = Sparent::all();
         return view('backend.layout.users.students',compact('students','title','guardian'));
     }
@@ -57,4 +58,7 @@ class StudentController extends Controller
 
        return redirect()->back();
     }
+
+
+    
 }

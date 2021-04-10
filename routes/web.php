@@ -31,6 +31,7 @@ Route::get('/', [DashboardController::class, 'home'])->name('home');
 Route::get('/students', [StudentController::class,'students'])->name('users.students');
 Route::post('/student/create', [StudentController::class, 'studentcreate'])->name('student.create');
 
+
 //teachers
 Route::get('/teacher', [TeacherController::class, 'teacherslist'])->name('users.teachers');
 Route::get('/teacher/form',[TeacherController::class,'teachersform'])->name('teacher.form');

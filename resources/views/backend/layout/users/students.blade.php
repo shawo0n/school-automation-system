@@ -42,8 +42,11 @@
         <td><img style="width: 100px;" src="{{url('/images/students/'.$data->image)}}" alt="image"></td>
         
          <td>
+          
             <a class="btn btn-success" href="">View</a>
-            <a class="btn btn-danger" href="">Delete</a>
+            
+           <button type="submit" class="btn btn-danger">Delete</button> 
+        
         </td>
         
     </tr>
@@ -51,9 +54,10 @@
 
     </tbody>
 </table>
-    
+{{$students->links()}}
 
 </div>
+
 
       
 
@@ -153,6 +157,7 @@
       </div>
                                                                                                 
 </form>
+
 </article>
 </div> <!-- card.// -->
 
