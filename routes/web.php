@@ -30,7 +30,7 @@ Route::get('/', [DashboardController::class, 'home'])->name('home');
 //students
 Route::get('/students', [StudentController::class,'students'])->name('users.students');
 Route::post('/student/create', [StudentController::class, 'studentcreate'])->name('student.create');
-
+Route::get('/student/delete/{id}',[StudentController::class, 'studentDelete'])->name('delete.student');
 
 //teachers
 Route::get('/teacher', [TeacherController::class, 'teacherslist'])->name('users.teachers');

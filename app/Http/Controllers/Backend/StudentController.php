@@ -59,6 +59,14 @@ class StudentController extends Controller
        return redirect()->back();
     }
 
+    public function studentDelete($id)
+    {
+       $students = Student::find($id);
 
+       $students->delete();
+
+
+       return redirect()->back();
+    }
     
 }

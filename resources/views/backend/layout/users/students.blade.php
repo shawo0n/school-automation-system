@@ -45,7 +45,7 @@
           
             <a class="btn btn-success" href="">View</a>
             
-           <button type="submit" class="btn btn-danger">Delete</button> 
+            <a class="btn btn-danger" href="{{route('delete.student', $data->id)}}">Delete</a>
         
         </td>
         
